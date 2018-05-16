@@ -21,6 +21,9 @@ def PoW(last_proof):
     return inc
 
 # TODO: Validation process
+def validate():
+    pass
+
 # Peer node search process
 @node.route('/find_peers', methods = ['GET'])
 def findPeers():
@@ -38,7 +41,7 @@ def findPeers():
             if not peer in peer_nodes:
                 peer_nodes.append(peer)
 
-    return json.dumps(peer_nodes)
+    return json.dumps(peer_nodes, indent=4)
 
 @node.route('/mine', methods = ['GET'])
 def mine():
@@ -82,7 +85,7 @@ def getChain():
     for block in node_chain:
         sending_chain.append(blockToJSON(block))
 
-    return json.dumps(sending_chain)
+    return json.dumps(sending_chain, indent=4)
         
 def findChains():
     other_chains = []
