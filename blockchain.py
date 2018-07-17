@@ -11,6 +11,7 @@ class Block():
     def __str__(self):
         return "<Block with hash value %s>" % (self.block_hash)
 
+# TODO: implement merkle tree data structure
 class Header():
     def __init__(self, index, timestamp, prev_block, nonce, mrkl_root):
         self.index = index  # int

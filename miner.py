@@ -12,7 +12,7 @@ node_transactions = []
 peer_nodes = []
 peer_servers = ['localhost:8080']
 
-# TODO: modify PoW
+# TODO: modify PoW - currently very simple work
 def PoW(last_proof):
     inc = last_proof + 1
     while not (inc % 9 == 0 and inc % last_proof == 0):
