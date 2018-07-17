@@ -1,5 +1,6 @@
 How to simulate (needs many terminals):
-python version: 3.x\n
+
+python version: 3.x
 
 <terminal 1 - server containing peer miner info>
 $ python peers.py
